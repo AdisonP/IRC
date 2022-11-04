@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF8"/>
+<title> Welcome </title>
+</head>
+<body>
+<div id="messages"></div>
+<form action="">
+ <input id="ms" autocomplete="off"/>
+ <button id="addroom">send</button>
+</form>
+
+<button>Create room</button>
+<script src="/socket.io/socket.io.js"> </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"> </script>
+<script>
+    var socket = io();
+
+    $(function(){ 
+        $("form").submit(function(e){
+            e.preventDefault();
+
+            socket.emit('msg', $("#ms").val());
+            $("#ms").val("");
+
+            socket.emit('roomList');
+
+            return false;
+        })
+
+        socket.on('roomList', (rooms) => {
+            console.log(Array.from(rooms));
+        })
+        socket.on('msg', function(chat){
+            $("#messages").append($("<p>").text(chat));
+        })
+    })
+</script>
+<script>
+    var socket = io();
+        $('#addroom').click(function() {
+            //socket.emit('addroom', 'room1');
+            console.log('toto');
+        })
+</script>
+</body>
+</html>

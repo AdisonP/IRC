@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100&family=Kodchasan:wght@200&family=Neonderthaw&display=swap');
+
+*{
+    font-family: 'Catamaran', sans-serif;
+font-family: 'Kodchasan', sans-serif;
+}
+
+
+#convBloc {
+    width: 80%;
+    background: #000000;
+    border: 1px solid #000000;
+    border-radius: 10px; 
+}
+
+
+
+#text_input {
+    height: 30px;
+    width: 80%;
+    background: #C4C4C4;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 0px 0px 10px;
+    margin-top: -5px;
+}
+
+#botSegment {
+    width: 100%;
+    height: 10%;
+}
+
+#submit {
+    height: 30px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#render {
+    width : 100%;
+    height : 90%;
+    max-height: 90vh;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+
+    overflow-y:scroll; 
+    overflow-x:hidden;
+}
+
+.urgent{
+    color: red;
+}
+
+.notification {
+    color: green;
+    font-style: italic;
+}
+
+.second {
+    color: gray;
+}
+
+h1 {
+    width: 100%;
+    font-size: 10em;
+    text-align: center;
+    font-family: 'Neonderthaw';
+    animation: color-change 3s infinite;
+}
+
+
+  
+  @keyframes color-change {
+    0% { color: purple; }
+    50% { color: pink; }
+    100% { color: purple; }
+  }

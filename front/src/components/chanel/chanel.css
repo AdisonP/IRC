@@ -1,0 +1,32 @@
+#channel {
+    width: 264px;
+    height: 799px;
+    left: 15px;
+    top: 212px;
+
+    background: rgba(196, 196, 196, 0.47);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#Name {
+    width: 172px;
+    height: 43px;
+    left: 2px;
+    top: 5px;
+
+    background: #C4C4C4;
+    border-radius: 10px;
+}
+
+#addroom {
+    width: 59px;
+    height: 43px;
+    left: 190px;
+    top: 5px;
+
+    border-radius: 10px;
+}
